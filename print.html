@@ -1,0 +1,478 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>AutoexecBot Documentation</title>
+        
+        <meta name="robots" content="noindex" />
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="introduction.html"><strong aria-hidden="true">1.</strong> Introduction to AutoexecBot</a></li><li class="chapter-item expanded "><a href="commands.html"><strong aria-hidden="true">2.</strong> Commands</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="commands/namefilter.html"><strong aria-hidden="true">2.1.</strong> Name Filter</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="commands/filtersyntax.html"><strong aria-hidden="true">2.1.1.</strong> Filter Syntax</a></li></ol></li><li class="chapter-item expanded "><a href="commands/chatfilter.html"><strong aria-hidden="true">2.2.</strong> Chat Filter</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="commands/filtersyntax.html"><strong aria-hidden="true">2.2.1.</strong> Filter Syntax</a></li></ol></li><li class="chapter-item expanded "><a href="commands/chatgames.html"><strong aria-hidden="true">2.3.</strong> Chat Games</a></li><li class="chapter-item expanded "><a href="commands/diagnostics.html"><strong aria-hidden="true">2.4.</strong> Diagnostics</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">AutoexecBot Documentation</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#introduction" id="introduction">Introduction</a></h1>
+<h1><a class="header" href="#commands" id="commands">Commands</a></h1>
+<p>AutoexecBot comes with several built-in commands to help with moderating chat, diagnosing issues with the bot, and fun chat games. This section highlights those commands and their usage.</p>
+<p>For more information on the individual commands, see the following sections:</p>
+<ul>
+<li><a href="./namefilter.html">Name Filter</a></li>
+<li><a href="./chatfilter.html">Chat Filter</a></li>
+<li><a href="./chatgames.html">Chat Games</a></li>
+<li><a href="./diagnostics.html">Diagnostics</a></li>
+</ul>
+<h1><a class="header" href="#name-filter" id="name-filter">Name Filter</a></h1>
+<p>Name filtering is used to ban chatters and new followers with offensive names that may not match your community guidelines for your channel.  It is an optional feature and you are not required to use it in your channel.  It provides the ability to add and remove name filters and allows for users to be whitelisted, if their name is caught by an over-eager filter.  The filters use a custom <a href="commands/./filtersyntax.html">filter syntax</a> designed for AutoexecBot to allow for flexible matching against phrases.</p>
+<p>All of the commands listed on this page are restricted to usage by the channel broadcaster and moderators only.</p>
+<blockquote>
+<p>⚠ There's currently no way to list all of the existing filters.  This is a feature that will be added in the future once the website is available.</p>
+</blockquote>
+<h2><a class="header" href="#subcommands" id="subcommands">Subcommands</a></h2>
+<p>The name filter functionality uses a series of subcommands to allow for configuration, which are documented below.</p>
+<h3><a class="header" href="#add-a-new-filter" id="add-a-new-filter">Add a new filter</a></h3>
+<blockquote>
+<p><strong>Usage</strong></p>
+<p><code>!namefilter add [filter]</code></p>
+</blockquote>
+<p>This subcommand is used to add a new filter to the name filters.  The <code>filter</code> parameter is required and follows the <a href="commands/./filtersyntax.html">filter syntax</a> outlined in the next section.</p>
+<h3><a class="header" href="#remove-an-existing-filter" id="remove-an-existing-filter">Remove an existing filter</a></h3>
+<blockquote>
+<p><strong>Usage</strong></p>
+<p><code>!namefilter remove [filter]</code></p>
+</blockquote>
+<p>This subcommand is used to remove an existing filter from the name filters.  The <code>filter</code> parameter is required and follows the <a href="commands/./filtersyntax.html">filter syntax</a> outlined in the next section.</p>
+<h3><a class="header" href="#adding-a-user-to-the-name-whitelist" id="adding-a-user-to-the-name-whitelist">Adding a user to the name whitelist</a></h3>
+<blockquote>
+<p><strong>Usage</strong></p>
+<p><code>!namefilter allow [name]</code></p>
+</blockquote>
+<p>This subcommand is used to add the given username to the whitelist of allowed users.  The <code>name</code> parameter is required and must be an exact match for the name of the user, however the name is not case sensitive.</p>
+<p>This command will also unban the user if they had been banned.</p>
+<h3><a class="header" href="#removing-a-use-from-the-name-whitelist" id="removing-a-use-from-the-name-whitelist">Removing a use from the name whitelist</a></h3>
+<blockquote>
+<p><strong>Usage</strong></p>
+<p><code>!namefilter allow [name]</code></p>
+</blockquote>
+<p>This subcommand is used to remove the given username from the whitelist of allowed users.  The <code>name</code> parameter is required and must be an exact match for the name of the user, however the name is not case sensitive.</p>
+<p>This command will also ban the user if they have not been previously banned.</p>
+<h1><a class="header" href="#filter-syntax" id="filter-syntax">Filter Syntax</a></h1>
+<p>AutoexecBot provides a special syntax for matching names, words, and phrases in chat that allows for some flexibility in what gets matched.  These filters are always case-insensitive.  There's several available operators for constructing a filter.  This section explains those operators and their usage.</p>
+<blockquote>
+<p>⚠ Currently the filter syntax will only match on words as it does not currently support spaces.  The ability to match on broader phrases, including spaces may be added in the future.</p>
+</blockquote>
+<h2><a class="header" href="#wildcard---zero-or-more" id="wildcard---zero-or-more">Wildcard - Zero or more</a></h2>
+<p>It is possible to match on a wildcard in text zero or more times using the <code>*</code> operator.  This operator acts as a placeholder for any character repeated zero or more times.</p>
+<h3><a class="header" href="#example-1" id="example-1">Example 1</a></h3>
+<blockquote>
+<p><code>KEK*</code></p>
+</blockquote>
+<p>This would match on any text that starts with <code>KEK</code>.  Such was <code>KEK</code>, <code>KEKW</code>, <code>KEKWW</code>, etc.</p>
+<h3><a class="header" href="#example-2" id="example-2">Example 2</a></h3>
+<blockquote>
+<p><code>KE*K</code></p>
+</blockquote>
+<p>This would match on any text that begins with <code>KE</code> and ends with <code>K</code> such as <code>KEK</code>, <code>KEEK</code>, <code>KEEKK</code>, etc.</p>
+<h2><a class="header" href="#wildcard---one-or-more" id="wildcard---one-or-more">Wildcard - One or more</a></h2>
+<p>It is possible to match on a wildcard in text one or more times using the <code>+</code> operator.  This operator acts as a placeholder for any character repeated one or more times.</p>
+<h3><a class="header" href="#example-1-1" id="example-1-1">Example 1</a></h3>
+<blockquote>
+<p>KEK+</p>
+</blockquote>
+<p>This would match on any text that starts with <code>KEK</code> and is followed by one or more characters. Such as <code>KEKW</code>, <code>KEKA</code>, <code>KEKAA</code>, <code>KEKWA</code>, etc.</p>
+<h3><a class="header" href="#example-2-1" id="example-2-1">Example 2</a></h3>
+<blockquote>
+<p>KE+K</p>
+</blockquote>
+<p>This would match on any text that starts with <code>KE</code> followed by any character and the letter <code>K</code>.  Such as <code>KEEK</code>, <code>KEKK</code>, <code>KEKEK</code>, etc.</p>
+<h2><a class="header" href="#wildcard---at-most-one" id="wildcard---at-most-one">Wildcard - At most one</a></h2>
+<p>It is possible to match on at most one wild card value using the <code>?</code> operator.  It is a placeholder for any character used zero to one times.</p>
+<h3><a class="header" href="#example-1-2" id="example-1-2">Example 1</a></h3>
+<blockquote>
+<p><code>KEK?</code></p>
+</blockquote>
+<p>This would match on any text starting with <code>KEK</code> followed by zero to one more letter.  Such as <code>KEK</code>, <code>KEKA</code>, <code>KEKB</code>, <code>KEKC</code>, etc.</p>
+<h3><a class="header" href="#example-2-2" id="example-2-2">Example 2</a></h3>
+<blockquote>
+<p><code>KE?K</code></p>
+</blockquote>
+<p>This would match any text that starts with <code>KEK</code>, followed by zero or one character and the letter <code>K</code>.  Such as <code>KEK</code>, <code>KEKK</code>, <code>KESK</code>, etc.</p>
+<h2><a class="header" href="#fuzzy-letter-match" id="fuzzy-letter-match">Fuzzy letter match</a></h2>
+<p>It is a common case where users will use the letter <code>i</code> and letter <code>l</code> interchangably with the casing changed, due to their similar appearance under some fonts.  To help with this issue a special &quot;fuzzy letter match&quot; is provided for this case.  The <code>[i]</code> operator will match either the letter <code>i</code> or letter <code>l</code>.</p>
+<h3><a class="header" href="#example" id="example">Example</a></h3>
+<blockquote>
+<p><code>boo[i]i</code>.</p>
+</blockquote>
+<p>This would match either <code>booli</code> or <code>booii</code>.</p>
+<h2><a class="header" href="#repeating" id="repeating">Repeating</a></h2>
+<p>Sometimes users will repeat the same character multiple times in order to circumvent filters.  To help with this, the repeating operator <code>%</code> can be used to indicate that the following character (including the fuzzy letter match) can be repeated one or more times.</p>
+<h3><a class="header" href="#example-1-3" id="example-1-3">Example 1</a></h3>
+<blockquote>
+<p><code>KEK%W</code></p>
+</blockquote>
+<p>This would match <code>KEKW</code>, <code>KEKWW</code>, <code>KEKWWW</code>, etc.</p>
+<h3><a class="header" href="#example-2-3" id="example-2-3">Example 2</a></h3>
+<blockquote>
+<p><code>bool%[i]</code></p>
+</blockquote>
+<p>This would match <code>booli</code>, <code>booll</code>, <code>boolii</code>, <code>boolll</code>, <code>boolli</code>, etc.</p>
+<h2><a class="header" href="#operator-escape-sequences" id="operator-escape-sequences">Operator escape sequences</a></h2>
+<p>Sometimes it is necessary to filter on the characters listed as operators in this document verbatim and not as the operators themselves.  The filter syntax provides escape sequences prefixed with <code>\</code> to match on those characters reserved as operators. The following is a comprehensive list of escape sequences.</p>
+<ul>
+<li><code>\\</code> - Matches on the character <code>\</code></li>
+<li><code>\*</code> - Matches on the character <code>*</code></li>
+<li><code>\+</code> - Matches on the character <code>+</code></li>
+<li><code>\?</code> - Matches on the character <code>?</code></li>
+<li><code>\%</code> - Matches on the character <code>%</code></li>
+<li><code>\[</code> - Matches on the character <code>[</code>
+<ul>
+<li>Prefixing <code>[i]</code> with <code>\</code> such as <code>\[i]</code> would match <code>[i]</code> exactly and not use the fuzzy match operator</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>⚠ Currently there is no way to escape the sequence <code>r#</code> at the beggining of a filter.  This will be corrected in a future update.</p>
+</blockquote>
+<h2><a class="header" href="#regular-expressions" id="regular-expressions">Regular Expressions</a></h2>
+<blockquote>
+<p>⚠ This is a feature for advanced users only! Improper use can lead to unintended consequences, such as all users being banned from your channel. <strong>USE AT YOUR OWN RISK</strong>.  If you do not know what a regular expression is, this feature is probably not for you.</p>
+</blockquote>
+<p>Prexifing any filter with <code>r#</code> will parse all text after the <code>r#</code> as a regular expression, following the syntax outlined in the Rust <a href="https://docs.rs/regex/latest/regex/">regex crate</a> documentation.</p>
+<h3><a class="header" href="#example-1-4" id="example-1-4">Example 1</a></h3>
+<blockquote>
+<p>r#(a|b)+</p>
+</blockquote>
+<p>This would match all text that's any combination of the letters <code>a</code> and <code>b</code> repeated one or more times.  Such as <code>a</code>, <code>b</code>, <code>ab</code>, <code>ba</code>, <code>aa</code>, <code>bb</code>, etc.</p>
+<h1><a class="header" href="#chat-filter" id="chat-filter">Chat Filter</a></h1>
+<p>Chater filtering is used to moderate chat messages that may not match your community guidelines for your channel.  It is an optional feature and you are not required to use it in your channel.  It provides the ability to add and remove chat filters and setting the level of moderation to apply to the message.  The filters use a custom <a href="commands/./filtersyntax.html">filter syntax</a> designed for AutoexecBot to allow for flexible matching against phrases.</p>
+<p>All of the commands listed on this page are restricted to usage by the channel broadcaster and moderators only.</p>
+<blockquote>
+<p>⚠ There's currently no way to list all of the existing filters.  This is a feature that will be added in the future once the website is available.</p>
+</blockquote>
+<h2><a class="header" href="#subcommands-1" id="subcommands-1">Subcommands</a></h2>
+<p>The chat filter functionality uses a series of subcommands to allow for configuration, which are documented below.</p>
+<h3><a class="header" href="#add-a-new-filter-1" id="add-a-new-filter-1">Add a new filter</a></h3>
+<blockquote>
+<p><strong>Usage</strong></p>
+<p><code>!chatfilter add (moderation level) [filter]</code></p>
+</blockquote>
+<p>This subcommand is used to add a new filter to the chat filters.  The <code>filter</code> parameter is required and follows the <a href="commands/./filtersyntax.html">filter syntax</a> outlined in the next section.  The <code>(moderation level)</code> parameter is optional, defaulting to clearing the individual message from chat and can be configured as follows:</p>
+<ul>
+<li><code>--timeout</code> - Times the user out for the default 10 minutes</li>
+<li><code>--timeout=[duration]</code> - Times the user out for the specified duration in seconds</li>
+<li><code>--ban</code> - Bans the users from chat</li>
+</ul>
+<p>Some example uses:</p>
+<ul>
+<li><code>!chatfilter add --ban KEKW</code> - Bans any user that says <code>KEKW</code> in chat</li>
+<li><code>!chatfilter add --timeout KEKW</code> - Times out any user that says <code>KEKW</code> in chat for 10 minutes</li>
+<li><code>!chatfilter add --timeout=300 KEKW</code> - Times out any users that says <code>KEKW</code> in chat for 300 seconds (5 minutes)</li>
+<li><code>!chatfilter add KEKW</code> - Clears any individual messages containing <code>KEKW</code> from chat</li>
+</ul>
+<h3><a class="header" href="#remove-an-existing-filter-1" id="remove-an-existing-filter-1">Remove an existing filter</a></h3>
+<blockquote>
+<p><strong>Usage</strong></p>
+<p><code>!namefilter remove [filter]</code></p>
+</blockquote>
+<p>This subcommand is used to remove an existing filter from the chat filters.  The <code>filter</code> parameter is required and follows the <a href="commands/./filtersyntax.html">filter syntax</a> outlined in the next section.</p>
+<h1><a class="header" href="#filter-syntax-1" id="filter-syntax-1">Filter Syntax</a></h1>
+<p>AutoexecBot provides a special syntax for matching names, words, and phrases in chat that allows for some flexibility in what gets matched.  These filters are always case-insensitive.  There's several available operators for constructing a filter.  This section explains those operators and their usage.</p>
+<blockquote>
+<p>⚠ Currently the filter syntax will only match on words as it does not currently support spaces.  The ability to match on broader phrases, including spaces may be added in the future.</p>
+</blockquote>
+<h2><a class="header" href="#wildcard---zero-or-more-1" id="wildcard---zero-or-more-1">Wildcard - Zero or more</a></h2>
+<p>It is possible to match on a wildcard in text zero or more times using the <code>*</code> operator.  This operator acts as a placeholder for any character repeated zero or more times.</p>
+<h3><a class="header" href="#example-1-5" id="example-1-5">Example 1</a></h3>
+<blockquote>
+<p><code>KEK*</code></p>
+</blockquote>
+<p>This would match on any text that starts with <code>KEK</code>.  Such was <code>KEK</code>, <code>KEKW</code>, <code>KEKWW</code>, etc.</p>
+<h3><a class="header" href="#example-2-4" id="example-2-4">Example 2</a></h3>
+<blockquote>
+<p><code>KE*K</code></p>
+</blockquote>
+<p>This would match on any text that begins with <code>KE</code> and ends with <code>K</code> such as <code>KEK</code>, <code>KEEK</code>, <code>KEEKK</code>, etc.</p>
+<h2><a class="header" href="#wildcard---one-or-more-1" id="wildcard---one-or-more-1">Wildcard - One or more</a></h2>
+<p>It is possible to match on a wildcard in text one or more times using the <code>+</code> operator.  This operator acts as a placeholder for any character repeated one or more times.</p>
+<h3><a class="header" href="#example-1-6" id="example-1-6">Example 1</a></h3>
+<blockquote>
+<p>KEK+</p>
+</blockquote>
+<p>This would match on any text that starts with <code>KEK</code> and is followed by one or more characters. Such as <code>KEKW</code>, <code>KEKA</code>, <code>KEKAA</code>, <code>KEKWA</code>, etc.</p>
+<h3><a class="header" href="#example-2-5" id="example-2-5">Example 2</a></h3>
+<blockquote>
+<p>KE+K</p>
+</blockquote>
+<p>This would match on any text that starts with <code>KE</code> followed by any character and the letter <code>K</code>.  Such as <code>KEEK</code>, <code>KEKK</code>, <code>KEKEK</code>, etc.</p>
+<h2><a class="header" href="#wildcard---at-most-one-1" id="wildcard---at-most-one-1">Wildcard - At most one</a></h2>
+<p>It is possible to match on at most one wild card value using the <code>?</code> operator.  It is a placeholder for any character used zero to one times.</p>
+<h3><a class="header" href="#example-1-7" id="example-1-7">Example 1</a></h3>
+<blockquote>
+<p><code>KEK?</code></p>
+</blockquote>
+<p>This would match on any text starting with <code>KEK</code> followed by zero to one more letter.  Such as <code>KEK</code>, <code>KEKA</code>, <code>KEKB</code>, <code>KEKC</code>, etc.</p>
+<h3><a class="header" href="#example-2-6" id="example-2-6">Example 2</a></h3>
+<blockquote>
+<p><code>KE?K</code></p>
+</blockquote>
+<p>This would match any text that starts with <code>KEK</code>, followed by zero or one character and the letter <code>K</code>.  Such as <code>KEK</code>, <code>KEKK</code>, <code>KESK</code>, etc.</p>
+<h2><a class="header" href="#fuzzy-letter-match-1" id="fuzzy-letter-match-1">Fuzzy letter match</a></h2>
+<p>It is a common case where users will use the letter <code>i</code> and letter <code>l</code> interchangably with the casing changed, due to their similar appearance under some fonts.  To help with this issue a special &quot;fuzzy letter match&quot; is provided for this case.  The <code>[i]</code> operator will match either the letter <code>i</code> or letter <code>l</code>.</p>
+<h3><a class="header" href="#example-1" id="example-1">Example</a></h3>
+<blockquote>
+<p><code>boo[i]i</code>.</p>
+</blockquote>
+<p>This would match either <code>booli</code> or <code>booii</code>.</p>
+<h2><a class="header" href="#repeating-1" id="repeating-1">Repeating</a></h2>
+<p>Sometimes users will repeat the same character multiple times in order to circumvent filters.  To help with this, the repeating operator <code>%</code> can be used to indicate that the following character (including the fuzzy letter match) can be repeated one or more times.</p>
+<h3><a class="header" href="#example-1-8" id="example-1-8">Example 1</a></h3>
+<blockquote>
+<p><code>KEK%W</code></p>
+</blockquote>
+<p>This would match <code>KEKW</code>, <code>KEKWW</code>, <code>KEKWWW</code>, etc.</p>
+<h3><a class="header" href="#example-2-7" id="example-2-7">Example 2</a></h3>
+<blockquote>
+<p><code>bool%[i]</code></p>
+</blockquote>
+<p>This would match <code>booli</code>, <code>booll</code>, <code>boolii</code>, <code>boolll</code>, <code>boolli</code>, etc.</p>
+<h2><a class="header" href="#operator-escape-sequences-1" id="operator-escape-sequences-1">Operator escape sequences</a></h2>
+<p>Sometimes it is necessary to filter on the characters listed as operators in this document verbatim and not as the operators themselves.  The filter syntax provides escape sequences prefixed with <code>\</code> to match on those characters reserved as operators. The following is a comprehensive list of escape sequences.</p>
+<ul>
+<li><code>\\</code> - Matches on the character <code>\</code></li>
+<li><code>\*</code> - Matches on the character <code>*</code></li>
+<li><code>\+</code> - Matches on the character <code>+</code></li>
+<li><code>\?</code> - Matches on the character <code>?</code></li>
+<li><code>\%</code> - Matches on the character <code>%</code></li>
+<li><code>\[</code> - Matches on the character <code>[</code>
+<ul>
+<li>Prefixing <code>[i]</code> with <code>\</code> such as <code>\[i]</code> would match <code>[i]</code> exactly and not use the fuzzy match operator</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>⚠ Currently there is no way to escape the sequence <code>r#</code> at the beggining of a filter.  This will be corrected in a future update.</p>
+</blockquote>
+<h2><a class="header" href="#regular-expressions-1" id="regular-expressions-1">Regular Expressions</a></h2>
+<blockquote>
+<p>⚠ This is a feature for advanced users only! Improper use can lead to unintended consequences, such as all users being banned from your channel. <strong>USE AT YOUR OWN RISK</strong>.  If you do not know what a regular expression is, this feature is probably not for you.</p>
+</blockquote>
+<p>Prexifing any filter with <code>r#</code> will parse all text after the <code>r#</code> as a regular expression, following the syntax outlined in the Rust <a href="https://docs.rs/regex/latest/regex/">regex crate</a> documentation.</p>
+<h3><a class="header" href="#example-1-9" id="example-1-9">Example 1</a></h3>
+<blockquote>
+<p>r#(a|b)+</p>
+</blockquote>
+<p>This would match all text that's any combination of the letters <code>a</code> and <code>b</code> repeated one or more times.  Such as <code>a</code>, <code>b</code>, <code>ab</code>, <code>ba</code>, <code>aa</code>, <code>bb</code>, etc.</p>
+<h1><a class="header" href="#chat-games" id="chat-games">Chat Games</a></h1>
+<p>AutoexecBot comes with some built-in chat games.  This section covers those games, how to activate them, and what they do.</p>
+<h1><a class="header" href="#diagnostics" id="diagnostics">Diagnostics</a></h1>
+<p>From time to time, when asking for support for your copy of AutoexecBot you may be asked to provide some diagnostic information.  This section covers the commands that can be used by bot admins, channel broadcasters, and moderators to obtain that information.</p>
+<h2><a class="header" href="#runtime" id="runtime">Runtime</a></h2>
+<blockquote>
+<p><strong>Usage</strong></p>
+<p><code>!runtime</code></p>
+</blockquote>
+<p>The bot will report how long it has been running for.  This is useful for helping to know when the bot was last restarted, to look for any potential crash events.</p>
+<h2><a class="header" href="#version" id="version">Version</a></h2>
+<blockquote>
+<p><strong>Usage</strong></p>
+<p><code>!version</code> </p>
+</blockquote>
+<p>The bot will report its current version.  This is useful for reporting which version of the bot is running in your channel when asking for support.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+        
+        
+        <script type="text/javascript">
+            window.playpen_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+        
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+        
+        
+
+    </body>
+</html>

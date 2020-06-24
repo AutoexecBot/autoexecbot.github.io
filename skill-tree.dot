@@ -1,0 +1,153 @@
+digraph g {
+graph [ rankdir = "LR" ];
+node [ fontsize="16", shape = "ellipse" ];
+edge [ ];
+"oauth-tokens" [
+  label = <<table>
+    <tr><td bgcolor="darkgoldenrod" port="all" colspan="2" href="https://github.com/Mr-Byte/autoexecbot/projects/">OAuth Token Management</td></tr>
+    <tr><td bgcolor="cornsilk">☑️</td><td bgcolor="cornsilk" href="https://github.com/Mr-Byte/autoexecbot/issues/24"><s>Create Twitch OAuth token service</s></td></tr>
+    <tr><td bgcolor="cornsilk">☑️</td><td bgcolor="cornsilk" href="https://github.com/Mr-Byte/autoexecbot/issues/23"><s>Add endpoint to store user OAuth tokens</s></td></tr>
+    <tr><td bgcolor="cornsilk">☑️</td><td bgcolor="cornsilk" href="https://github.com/Mr-Byte/autoexecbot/issues/22"><s>Add endpoint to retrieve user OAuth tokens</s></td></tr>
+    <tr><td bgcolor="cornsilk">☑️</td><td bgcolor="cornsilk" href="https://github.com/Mr-Byte/autoexecbot/issues/21"><s>Add user OAuth token validation and refreshing</s></td></tr>
+    <tr><td bgcolor="cornsilk">☑️</td><td bgcolor="cornsilk" href="https://github.com/Mr-Byte/autoexecbot/issues/20"><s>Add endpoint to retrieve client OAuth tokens</s></td></tr>
+    <tr><td bgcolor="cornsilk">☑️</td><td bgcolor="cornsilk" href="https://github.com/Mr-Byte/autoexecbot/issues/25"><s>Add endpoint to validate and refresh client OAuth tokens</s></td></tr>
+  </table>>
+  shape = "none"
+  margin = 0
+]
+"bot-lifecycle" [
+  label = <<table>
+    <tr><td bgcolor="darkgoldenrod" port="all" colspan="2" href="https://github.com/Mr-Byte/autoexecbot/projects/17">Bot Lifecycle Management Service</td></tr>
+    <tr><td bgcolor="cornsilk">🙋</td><td fontcolor="red" bgcolor="cornsilk" href="https://github.com/Mr-Byte/autoexecbot/issues/56"><u>Create bot lifecycle service</u></td></tr>
+    <tr><td bgcolor="cornsilk">🙋</td><td fontcolor="red" bgcolor="cornsilk" href="https://github.com/Mr-Byte/autoexecbot/issues/57"><u>Add endpoint to create a new bot on-demand</u></td></tr>
+    <tr><td bgcolor="cornsilk">🙋</td><td fontcolor="red" bgcolor="cornsilk" href="https://github.com/Mr-Byte/autoexecbot/issues/58"><u>Add endpoint to destroy an existing bot on-demand</u></td></tr>
+  </table>>
+  shape = "none"
+  margin = 0
+]
+"graphql" [
+  label = <<table>
+    <tr><td bgcolor="darkgoldenrod" port="all" colspan="2" href="https://github.com/Mr-Byte/autoexecbot/projects/15">GraphQL API</td></tr>
+    <tr><td bgcolor="cornsilk">☑️</td><td bgcolor="cornsilk" href="https://github.com/Mr-Byte/autoexecbot/issues/45"><s>Create GraphQL service</s></td></tr>
+    <tr><td bgcolor="cornsilk">🙋</td><td fontcolor="red" bgcolor="cornsilk" href="https://github.com/Mr-Byte/autoexecbot/issues/46"><u>Add bot to channel mutation</u></td></tr>
+    <tr><td bgcolor="cornsilk">🙋</td><td fontcolor="red" bgcolor="cornsilk" href="https://github.com/Mr-Byte/autoexecbot/issues/47"><u>Remove bot from channel mutation</u></td></tr>
+    <tr><td bgcolor="cornsilk">🙋</td><td fontcolor="red" bgcolor="cornsilk" href="https://github.com/Mr-Byte/autoexecbot/issues/48"><u>Name filters query</u></td></tr>
+    <tr><td bgcolor="cornsilk">🙋</td><td fontcolor="red" bgcolor="cornsilk" href="https://github.com/Mr-Byte/autoexecbot/issues/49"><u>Name filters mutation</u></td></tr>
+    <tr><td bgcolor="cornsilk">🙋</td><td fontcolor="red" bgcolor="cornsilk" href="https://github.com/Mr-Byte/autoexecbot/issues/50"><u>Chat filters query</u></td></tr>
+    <tr><td bgcolor="cornsilk">🙋</td><td fontcolor="red" bgcolor="cornsilk" href="https://github.com/Mr-Byte/autoexecbot/issues/51"><u>Chat filters mutation</u></td></tr>
+    <tr><td bgcolor="cornsilk">🙋</td><td fontcolor="red" bgcolor="cornsilk" href="https://github.com/Mr-Byte/autoexecbot/issues/52"><u>Custom commands query</u></td></tr>
+    <tr><td bgcolor="cornsilk">🙋</td><td fontcolor="red" bgcolor="cornsilk" href="https://github.com/Mr-Byte/autoexecbot/issues/53"><u>Custom commands mutation</u></td></tr>
+    <tr><td bgcolor="cornsilk">🙋</td><td fontcolor="red" bgcolor="cornsilk" href="https://github.com/Mr-Byte/autoexecbot/issues/54"><u>Team points query</u></td></tr>
+    <tr><td bgcolor="cornsilk">🙋</td><td fontcolor="red" bgcolor="cornsilk" href="https://github.com/Mr-Byte/autoexecbot/issues/55"><u>Team points mutation</u></td></tr>
+  </table>>
+  shape = "none"
+  margin = 0
+]
+"website" [
+  label = <<table>
+    <tr><td bgcolor="darkgoldenrod" port="all" colspan="2" href="https://github.com/Mr-Byte/autoexecbot/projects/10">Website</td></tr>
+    <tr><td bgcolor="cornsilk">☑️</td><td bgcolor="cornsilk" href="https://github.com/Mr-Byte/autoexecbot/issues/36"><s>Add ability for users to login via Twitch</s></td></tr>
+    <tr><td bgcolor="cornsilk">🙋</td><td fontcolor="red" bgcolor="cornsilk" href="https://github.com/Mr-Byte/autoexecbot/issues/37"><u>Add ability to add the bot to Twitch channels</u></td></tr>
+    <tr><td bgcolor="cornsilk">🙋</td><td fontcolor="red" bgcolor="cornsilk" href="https://github.com/Mr-Byte/autoexecbot/issues/38"><u>Add ability to remove the bot from Twitch channels</u></td></tr>
+    <tr><td bgcolor="cornsilk">🙋</td><td fontcolor="red" bgcolor="cornsilk" href="https://github.com/Mr-Byte/autoexecbot/issues/39"><u>Add ability to view a team's point leaderboards</u></td></tr>
+    <tr><td bgcolor="cornsilk">🙋</td><td fontcolor="red" bgcolor="cornsilk" href="https://github.com/Mr-Byte/autoexecbot/issues/40"><u>Add ability to view the cumulative points of each team</u></td></tr>
+    <tr><td bgcolor="cornsilk">🙋</td><td fontcolor="red" bgcolor="cornsilk" href="https://github.com/Mr-Byte/autoexecbot/issues/41"><u>Add ability to manage teams through website</u></td></tr>
+    <tr><td bgcolor="cornsilk" port="askfor_in">🙋</td><td fontcolor="red" bgcolor="cornsilk" href="https://github.com/Mr-Byte/autoexecbot/issues/42" port="askfor_out"><u>Add ability to manage custom commands</u></td></tr>
+  </table>>
+  shape = "none"
+  margin = 0
+]
+"custom-commands" [
+  label = <<table>
+    <tr><td bgcolor="darkgoldenrod" port="all" colspan="2" href="https://github.com/Mr-Byte/autoexecbot/projects/8">Custom Commands</td></tr>
+    <tr><td bgcolor="cornsilk">🙋</td><td fontcolor="red" bgcolor="cornsilk" href="https://github.com/Mr-Byte/autoexecbot/issues/28"><u>Add support for chat commands</u></td></tr>
+    <tr><td bgcolor="cornsilk">🙋</td><td fontcolor="red" bgcolor="cornsilk" href="https://github.com/Mr-Byte/autoexecbot/issues/29"><u>Add support for timer commands</u></td></tr>
+    <tr><td bgcolor="cornsilk" port="askfor_in">🙋</td><td fontcolor="red" bgcolor="cornsilk" href="https://github.com/Mr-Byte/autoexecbot/issues/30" port="askfor_out"><u>Add support for channel point commands</u></td></tr>
+  </table>>
+  shape = "none"
+  margin = 0
+]
+"custom-command-expressionms" [
+  label = <<table>
+    <tr><td bgcolor="darkgoldenrod" port="all" colspan="2" href="https://github.com/Mr-Byte/autoexecbot/projects/18">Custom Command Expressions</td></tr>
+    <tr><td bgcolor="cornsilk">🙋</td><td fontcolor="red" bgcolor="cornsilk" href="https://github.com/Mr-Byte/autoexecbot/issues/59"><u>Add custom expression parser</u></td></tr>
+    <tr><td bgcolor="cornsilk">🙋</td><td fontcolor="red" bgcolor="cornsilk" href="https://github.com/Mr-Byte/autoexecbot/issues/60"><u>Add support for random numbers</u></td></tr>
+    <tr><td bgcolor="cornsilk">🙋</td><td fontcolor="red" bgcolor="cornsilk" href="https://github.com/Mr-Byte/autoexecbot/issues/61"><u>Add support for pick function (pick a random value from list)</u></td></tr>
+    <tr><td bgcolor="cornsilk">🙋</td><td fontcolor="red" bgcolor="cornsilk" href="https://github.com/Mr-Byte/autoexecbot/issues/62"><u>Add support for built-in variables</u></td></tr>
+    <tr><td bgcolor="cornsilk">🙋</td><td fontcolor="red" bgcolor="cornsilk" href="https://github.com/Mr-Byte/autoexecbot/issues/63"><u>Add support for custom variables</u></td></tr>
+  </table>>
+  shape = "none"
+  margin = 0
+]
+"twitch-pub-sub" [
+  label = <<table>
+    <tr><td bgcolor="darkgoldenrod" port="all" colspan="2" href="https://github.com/Mr-Byte/autoexecbot/projects/7">Twitch PubSub</td></tr>
+    <tr><td bgcolor="cornsilk">🙋</td><td fontcolor="red" bgcolor="cornsilk" href="https://github.com/Mr-Byte/autoexecbot/issues/26"><u>Create PubSub service</u></td></tr>
+    <tr><td bgcolor="cornsilk">🙋</td><td fontcolor="red" bgcolor="cornsilk" href="https://github.com/Mr-Byte/autoexecbot/issues/27"><u>Add endpoint to subscribe to topics</u></td></tr>
+  </table>>
+  shape = "none"
+  margin = 0
+]
+"documentation" [
+  label = <<table>
+    <tr><td bgcolor="darkgoldenrod" port="all" colspan="2" href="https://github.com/Mr-Byte/autoexecbot/projects/11">Documentation</td></tr>
+    <tr><td bgcolor="cornsilk">🙋</td><td fontcolor="red" bgcolor="cornsilk" href="https://github.com/Mr-Byte/autoexecbot/issues/43"><u>Document built-in commands</u></td></tr>
+  </table>>
+  shape = "none"
+  margin = 0
+]
+"team-points" [
+  label = <<table>
+    <tr><td bgcolor="darkgoldenrod" port="all" colspan="2" href="https://github.com/Mr-Byte/autoexecbot/projects/9">Team Points Tracking</td></tr>
+    <tr><td bgcolor="cornsilk">🙋</td><td fontcolor="red" bgcolor="cornsilk" href="https://github.com/Mr-Byte/autoexecbot/issues/31"><u>Add ability to create teams</u></td></tr>
+    <tr><td bgcolor="cornsilk">🙋</td><td fontcolor="red" bgcolor="cornsilk" href="https://github.com/Mr-Byte/autoexecbot/issues/32"><u>Add ability to join a team</u></td></tr>
+    <tr><td bgcolor="cornsilk">🙋</td><td fontcolor="red" bgcolor="cornsilk" href="https://github.com/Mr-Byte/autoexecbot/issues/33"><u>Add ability to award points to teams</u></td></tr>
+    <tr><td bgcolor="cornsilk">🙋</td><td fontcolor="red" bgcolor="cornsilk" href="https://github.com/Mr-Byte/autoexecbot/issues/34"><u>Add ability to reset a team's points</u></td></tr>
+    <tr><td bgcolor="cornsilk">🙋</td><td fontcolor="red" bgcolor="cornsilk" href="https://github.com/Mr-Byte/autoexecbot/issues/35"><u>Add ability to randomly select a team member's name from a team</u></td></tr>
+  </table>>
+  shape = "none"
+  margin = 0
+]
+"team-point-chat-games" [
+  label = <<table>
+    <tr><td bgcolor="darkgoldenrod" port="all" colspan="2" href="https://github.com/Mr-Byte/autoexecbot/projects/12">Team Point Chat Games</td></tr>
+  </table>>
+  shape = "none"
+  margin = 0
+]
+"discord-integration" [
+  label = <<table>
+    <tr><td bgcolor="darkgoldenrod" port="all" colspan="2" href="https://github.com/Mr-Byte/autoexecbot/projects/3">Discord Integration</td></tr>
+    <tr><td bgcolor="cornsilk">🙋</td><td fontcolor="red" bgcolor="cornsilk" href="https://github.com/Mr-Byte/autoexecbot/issues/7"><u>Discord/Twitch account linking</u></td></tr>
+  </table>>
+  shape = "none"
+  margin = 0
+]
+"overlay-integration" [
+  label = <<table>
+    <tr><td bgcolor="darkgoldenrod" port="all" colspan="2" href="https://github.com/Mr-Byte/autoexecbot/projects/13">Overlay Integrations</td></tr>
+  </table>>
+  shape = "none"
+  margin = 0
+]
+"plugin-framework" [
+  label = <<table>
+    <tr><td bgcolor="darkgoldenrod" port="all" colspan="2" href="https://github.com/Mr-Byte/autoexecbot/projects/14">Plugin Framework</td></tr>
+  </table>>
+  shape = "none"
+  margin = 0
+]
+"oauth-tokens":all -> "graphql":all;
+"bot-lifecycle":all -> "graphql":all;
+"team-points":all -> "graphql":all;
+"custom-commands":all -> "graphql":all;
+"oauth-tokens":all -> "website":all;
+"graphql":all -> "website":all;
+"twitch-pub-sub":all -> "custom-commands":askfor;
+"custom-commands":all -> "custom-command-expressionms":all;
+"oauth-tokens":all -> "twitch-pub-sub":all;
+"team-points":all -> "team-point-chat-games":all;
+"website":all -> "discord-integration":all;
+"website":all -> "overlay-integration":all;
+"website":all -> "plugin-framework":all;
+}
