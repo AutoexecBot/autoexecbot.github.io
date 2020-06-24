@@ -1,0 +1,140 @@
+[[group]]
+name = "oauth-tokens"
+label = "OAuth Token Management"
+href = "https://github.com/Mr-Byte/autoexecbot/projects/"
+items = [
+    { label = "Create Twitch OAuth token service", status = "Complete", href = "https://github.com/Mr-Byte/autoexecbot/issues/24" },
+    { label = "Add endpoint to store user OAuth tokens", status = "Complete", href = "https://github.com/Mr-Byte/autoexecbot/issues/23" },
+    { label = "Add endpoint to retrieve user OAuth tokens", status = "Complete", href = "https://github.com/Mr-Byte/autoexecbot/issues/22" },
+    { label = "Add user OAuth token validation and refreshing", status = "Complete", href = "https://github.com/Mr-Byte/autoexecbot/issues/21" },
+    { label = "Add endpoint to retrieve client OAuth tokens", status = "Complete", href = "https://github.com/Mr-Byte/autoexecbot/issues/20" },
+    { label = "Add endpoint to validate and refresh client OAuth tokens", status = "Complete", href = "https://github.com/Mr-Byte/autoexecbot/issues/25" }
+]
+
+[[group]]
+name = "bot-lifecycle"
+label = "Bot Lifecycle Management Service"
+href = "https://github.com/Mr-Byte/autoexecbot/projects/17"
+items = [
+    { label = "Create bot lifecycle service", href = "https://github.com/Mr-Byte/autoexecbot/issues/56" },
+    { label = "Add endpoint to create a new bot on-demand", href = "https://github.com/Mr-Byte/autoexecbot/issues/57" },
+    { label = "Add endpoint to destroy an existing bot on-demand", href = "https://github.com/Mr-Byte/autoexecbot/issues/58" }
+]
+
+[[group]]
+name = "graphql"
+label = "GraphQL API"
+href = "https://github.com/Mr-Byte/autoexecbot/projects/15"
+requires = ["oauth-tokens", "bot-lifecycle", "team-points", "custom-commands"]
+items = [
+    { label = "Create GraphQL service", status = "Complete", href = "https://github.com/Mr-Byte/autoexecbot/issues/45" },
+    { label = "Add bot to channel mutation", href = "https://github.com/Mr-Byte/autoexecbot/issues/46" },
+    { label = "Remove bot from channel mutation", href = "https://github.com/Mr-Byte/autoexecbot/issues/47" },
+    { label = "Name filters query", href = "https://github.com/Mr-Byte/autoexecbot/issues/48" },
+    { label = "Name filters mutation", href = "https://github.com/Mr-Byte/autoexecbot/issues/49" },
+    { label = "Chat filters query", href = "https://github.com/Mr-Byte/autoexecbot/issues/50" },
+    { label = "Chat filters mutation", href = "https://github.com/Mr-Byte/autoexecbot/issues/51" },
+    { label = "Custom commands query", href = "https://github.com/Mr-Byte/autoexecbot/issues/52" },
+    { label = "Custom commands mutation", href = "https://github.com/Mr-Byte/autoexecbot/issues/53" },
+    { label = "Team points query", href = "https://github.com/Mr-Byte/autoexecbot/issues/54" },
+    { label = "Team points mutation", href = "https://github.com/Mr-Byte/autoexecbot/issues/55" }
+]
+
+[[group]]
+name = "website"
+label = "Website"
+requires = ["oauth-tokens", "graphql"]
+href = "https://github.com/Mr-Byte/autoexecbot/projects/10"
+items = [
+    { label = "Add ability for users to login via Twitch", status = "Complete", href = "https://github.com/Mr-Byte/autoexecbot/issues/36" },
+    { label = "Add ability to add the bot to Twitch channels", href = "https://github.com/Mr-Byte/autoexecbot/issues/37" },
+    { label = "Add ability to remove the bot from Twitch channels", href = "https://github.com/Mr-Byte/autoexecbot/issues/38" },
+    { label = "Add ability to view a team's point leaderboards", href = "https://github.com/Mr-Byte/autoexecbot/issues/39" },
+    { label = "Add ability to view the cumulative points of each team", href = "https://github.com/Mr-Byte/autoexecbot/issues/40" },
+    { label = "Add ability to manage teams through website", href = "https://github.com/Mr-Byte/autoexecbot/issues/41" },
+    { label = "Add ability to manage custom commands", href = "https://github.com/Mr-Byte/autoexecbot/issues/42", port = "askfor" }
+]
+
+[[group]]
+name = "custom-commands"
+label = "Custom Commands"
+href = "https://github.com/Mr-Byte/autoexecbot/projects/8"
+items = [
+    { label = "Add support for chat commands", href = "https://github.com/Mr-Byte/autoexecbot/issues/28" },
+    { label = "Add support for timer commands", href = "https://github.com/Mr-Byte/autoexecbot/issues/29" },
+    { label = "Add support for channel point commands", href = "https://github.com/Mr-Byte/autoexecbot/issues/30", port = "askfor", requires = ["twitch-pub-sub"] },
+]
+
+[[group]]
+name = "custom-command-expressionms"
+label = "Custom Command Expressions"
+href = "https://github.com/Mr-Byte/autoexecbot/projects/18"
+requires = ["custom-commands"]
+items = [
+    { label = "Add custom expression parser", href = "https://github.com/Mr-Byte/autoexecbot/issues/59" },
+    { label = "Add support for random numbers", href = "https://github.com/Mr-Byte/autoexecbot/issues/60" },
+    { label = "Add support for pick function (pick a random value from list)", href = "https://github.com/Mr-Byte/autoexecbot/issues/61" },
+    { label = "Add support for built-in variables", href = "https://github.com/Mr-Byte/autoexecbot/issues/62" },
+    { label = "Add support for custom variables", href = "https://github.com/Mr-Byte/autoexecbot/issues/63" }
+]
+
+[[group]]
+name = "twitch-pub-sub"
+label = "Twitch PubSub"
+href = "https://github.com/Mr-Byte/autoexecbot/projects/7"
+requires = ["oauth-tokens"]
+items = [
+    { label = "Create PubSub service", href = "https://github.com/Mr-Byte/autoexecbot/issues/26" },
+    { label = "Add endpoint to subscribe to topics", href = "https://github.com/Mr-Byte/autoexecbot/issues/27" }
+]
+
+[[group]]
+name = "documentation"
+label = "Documentation"
+href = "https://github.com/Mr-Byte/autoexecbot/projects/11"
+items = [
+    { label = "Document built-in commands", href = "https://github.com/Mr-Byte/autoexecbot/issues/43" }
+]
+
+[[group]]
+name = "team-points"
+label = "Team Points Tracking"
+href = "https://github.com/Mr-Byte/autoexecbot/projects/9"
+items = [
+    { label = "Add ability to create teams", href = "https://github.com/Mr-Byte/autoexecbot/issues/31" },
+    { label = "Add ability to join a team", href = "https://github.com/Mr-Byte/autoexecbot/issues/32" },
+    { label = "Add ability to award points to teams", href = "https://github.com/Mr-Byte/autoexecbot/issues/33" },
+    { label = "Add ability to reset a team's points", href = "https://github.com/Mr-Byte/autoexecbot/issues/34" },
+    { label = "Add ability to randomly select a team member's name from a team", href = "https://github.com/Mr-Byte/autoexecbot/issues/35" }
+]
+
+[[group]]
+name = "team-point-chat-games"
+label = "Team Point Chat Games"
+href = "https://github.com/Mr-Byte/autoexecbot/projects/12"
+requires = [ "team-points" ]
+items = []
+
+[[group]]
+name = "discord-integration"
+label = "Discord Integration"
+requires = ["website" ]
+href = "https://github.com/Mr-Byte/autoexecbot/projects/3"
+items = [
+    { label = "Discord/Twitch account linking", href = "https://github.com/Mr-Byte/autoexecbot/issues/7" }
+]
+
+[[group]]
+name = "overlay-integration"
+label = "Overlay Integrations"
+requires = [ "website" ]
+href = "https://github.com/Mr-Byte/autoexecbot/projects/13"
+items = []
+
+[[group]]
+name = "plugin-framework"
+label = "Plugin Framework"
+href = "https://github.com/Mr-Byte/autoexecbot/projects/14"
+requires = [ "website" ]
+items = []
+
